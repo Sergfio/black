@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport"="width=devicewidth, initial-scale=1.0" >
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+			href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+			rel="stylesheet"
+		/>^
+        <script src="path/to/js/gsap/TweenMax.min.js"></script>
+<script src="path/to/js/jquery.min.js"></script>
+<!-- should be replaced with minified version when development is finished -->
+<script src="path/to/js/jquery.scrollmagic.js"></script>
+<!-- should be removed when development is finished -->
+<script src="path/to/js/jquery.scrollmagic.debug.js"></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="#home" id="homeTop">Home</a></li>
+                <li><a href="#about" id="aboutTop">About</a></li>
+                <li><a href="#projects" id="projectsTop">Projects</a></li>
+                <li><a href="#education" id="educationTop">Education</a></li>
+                <li><a href="#contact" id="contactTop">Contact</a></li>
+                <li><button id="login-btn" >Login</button></li>
+                <li><button id="register-btn">Register</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <dialog id="login-dialog">
+        <form id="login-form">
+            <h2>Login</h2>
+            <input type="text" placeholder="Username" id="username" required>
+            <input type="password" placeholder="Password" id="password" required>
+            <button type="submit">Login</button>
+            <button type="button" id="close-login-btn">Close</button>
+        </form>
+    </dialog>
+
+    <dialog id="register-dialog">
+        <form id="register-form">
+            <h2>Register</h2>
+            <input type="text" placeholder="Username" id="register-username" required>
+            <input type="password" placeholder="Password" id="register-password" required>
+            <input type="email" placeholder="Email" id="register-email" required>
+            <button type="submit">Register</button>
+            <button type="button" id="close-register-btn">Close</button>
+        </form>
+    </dialog>
+    <main>
+        <section id="home" class="home">
+            <div class="home-content">
+				<h1>Hi, I'm <span>Stefan Focht</span></h1>
+				<div class="text-animate">
+					<h3>Frontend Developer</h3>
+				</div>
+				<p>
+					a trained tool mechanic turned passionate web developer. Here, you can
+					explore a world of code, creative design, and innovative application
+					development. Dive into my passion for crafting solutions and discover
+					how technology can enrich our lives. From practical tips to deep
+					insights into the coding realm – get ready for an engaging journey
+					through the diverse landscape of web development. Enjoy the
+					exploration!
+				</p>
+
+				<div class="btn-box">
+					<a href="#hire" class="btn">Hire Me</a>
+					<a href="#talk" class="btn">Let's Talk</a>
+				</div>
+			</div>
+        </section>
+
+        	<!-- ANCHOR - About -->
+        <section class="about" id="about">
+			<h2 class="heading">About <span>Me</span></h2>
+
+			<div class="about-img">
+				<img src="/images/about.jpg" alt="" />
+				<span class="circle-spin"></span>
+			</div>
+
+			<div class="about-content">
+				<h3>Frontend Developer</h3>
+				<p>
+					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit ex
+					similique pariatur odit cumque neque magni accusamus, saepe magnam
+					nihil culpa provident quo autem quia expedita quaerat exercitationem,
+					deserunt qui.
+				</p>
+			</div>
+
+			<div class="btn-box btns">
+				<a href="#" class="btn">Read More</a>
+			</div>
+		</section>
+
+       <!-- ANCHOR - Education   -->
+		<section class="education" id="education">
+			<h2 class="heading">My <span>Journey</span></h2>
+
+			<div class="education-row">
+				<div class="education-column">
+					<h3 class="title">Education</h3>
+
+					<div class="education-box">
+						<div class="education-content">
+							<div class="content">
+								<div class="year"><i class="bx bxs-calendar"></i>2017-2018</div>
+								<h3>Master</h3>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									Officia perspiciatis earum dolore voluptatum itaque non quae
+									debitis cupiditate soluta aliquid nam magnam assumenda,
+									distinctio in illo beatae, voluptas molestias ut?
+								</p>
+							</div>
+						</div>
+						<div class="education-content">
+							<div class="content">
+								<div class="year"><i class="bx bxs-calendar"></i>2017-2018</div>
+								<h3>Master</h3>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									Officia perspiciatis earum dolore voluptatum itaque non quae
+									debitis cupiditate soluta aliquid nam magnam assumenda,
+									distinctio in illo beatae, voluptas molestias ut?
+								</p>
+							</div>
+						</div>
+						<div class="education-content">
+							<div class="content">
+								<div class="year"><i class="bx bxs-calendar"></i>2017-2018</div>
+								<h3>Master</h3>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									Officia perspiciatis earum dolore voluptatum itaque non quae
+									debitis cupiditate soluta aliquid nam magnam assumenda,
+									distinctio in illo beatae, voluptas molestias ut?
+								</p>
+							</div>
+						</div>
+						<div class="education-content">
+							<div class="content">
+								<div class="year"><i class="bx bxs-calendar"></i>2017-2018</div>
+								<h3>Master</h3>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									Officia perspiciatis earum dolore voluptatum itaque non quae
+									debitis cupiditate soluta aliquid nam magnam assumenda,
+									distinctio in illo beatae, voluptas molestias ut?
+								</p>
+							</div>
+						</div>
+						<div class="education-content">
+							<div class="content">
+								<div class="year"><i class="bx bxs-calendar"></i>2017-2018</div>
+								<h3>Master</h3>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									Officia perspiciatis earum dolore voluptatum itaque non quae
+									debitis cupiditate soluta aliquid nam magnam assumenda,
+									distinctio in illo beatae, voluptas molestias ut?
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+        <!-- ANCHOR kopiert -->
+
+
+
+
+
+		<footer>
+			<p class="copyright-text">© Copyright 2023 _______</p>
+            <div class="home-sci">
+				<a href="#"><i class="bx bxl-instagram"></i></a>
+				<a href="#"><i class="bx bxl-linkedin"></i></a>
+				<a href="#"><i class="bx bxl-github"></i></a>
+				<div class="home-imgHover"></div>
+			</div>
+		</footer>
+        <!-- kopiert ende -->
+
+        <section id="contact">
+            <!-- Add your content here -->
+            <h2>Kontakt</h2>
+            <p>Email: deine@email.com</p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/dein-profil" target="_blank">dein-profil</a></p>
+            <!-- Weitere Kontaktmöglichkeiten hinzufügen -->
+        </section>
+    </main>
+
+
+    <script src="script.js"></script>
+    <script src="index.js"></script>
+
+</body>
+</html>

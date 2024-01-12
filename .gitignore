@@ -1,0 +1,21 @@
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+*.pyc
+*.class
+
+# Environment files
+.env
+
+# Development tools
+.idea/
+.vscode/
+
+# External tools
+.pytest_cache/
+
+# Data files
+*.mat
+*.h5
