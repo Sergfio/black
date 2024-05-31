@@ -1,5 +1,5 @@
-// Your script here
 
+/*
 const loginBtn = document.getElementById("login-btn");
 const registerBtn = document.getElementById("register-btn");
 const loginDialog = document.getElementById("login-dialog");
@@ -22,7 +22,7 @@ closeLoginBtn.addEventListener("click", () => {
 closeRegisterBtn.addEventListener("click", () => {
     registerDialog.close();
 });
-
+*/
 // Implement the logic for the login and registration forms
 // You can use Firebase or a similar backend service for user data management and security
 // Add password hashing, validation, and error handling to enhance security and user experience
