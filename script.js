@@ -1,9 +1,9 @@
 // Import ScrollMagic
 const ScrollMagic = require('scrollmagic');
 const indicators = require('scrollmagic')
-// import ScrollMagic from "scrollmagic";
-// import "scrollmagic/scrollmagic/uncompressed/ScrollMagic.min.js";
-// import "scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.min.js";
+import ScrollMagic from "scrollmagic";
+import "scrollmagic/scrollmagic/uncompressed/ScrollMagic.min.js";
+import "scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.min.js";
 
 
 // Initialize ScrollMagic
