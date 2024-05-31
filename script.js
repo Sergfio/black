@@ -1,6 +1,6 @@
 // Import ScrollMagic
 const ScrollMagic = require('scrollmagic');
-const indicators = require('scrollmagi')
+const indicators = require('scrollmagic')
 // import ScrollMagic from "scrollmagic";
 // import "scrollmagic/scrollmagic/uncompressed/ScrollMagic.min.js";
 // import "scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.min.js";
@@ -31,7 +31,7 @@ const projectsScene = new ScrollMagic.Scene({
     triggerHook: 0.8,
     duration: "100%"
 })
-    .setClassToggle("#education", "active")
+    .setClassToggle("#projects", "active")
     .addTo(controller);
 
 
