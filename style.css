@@ -118,7 +118,7 @@ dialog button {
     display: flex;
     align-items: center;
     padding: 0 9%;
-    background: url("/images/Anschreiben.jpg") no-repeat;
+    background: url("./images/Anschreiben.jpg") no-repeat;
     background-size: cover;
     background-position: center;
 }
