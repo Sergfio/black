@@ -1,3 +1,3 @@
 # portfolio website
 
-!!! I am working on to finish it
+I am working on to finish it
