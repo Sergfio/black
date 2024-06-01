@@ -1,10 +1,9 @@
 // Import ScrollMagic
 const ScrollMagic = require('scrollmagic');
 const indicators = require('scrollmagic')
-import ScrollMagic from "scrollmagic";
+
 import "scrollmagic/scrollmagic/uncompressed/ScrollMagic.min.js";
 import "scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.min.js";
-
 
 // Initialize ScrollMagic
 const controller = new ScrollMagic.Controller();
@@ -26,13 +25,13 @@ const aboutScene = new ScrollMagic.Scene({
     .setClassToggle("#about", "active")
     .addTo(controller);
 
-const projectsScene = new ScrollMagic.Scene({
-    triggerElement: "#projects",
-    triggerHook: 0.8,
-    duration: "100%"
-})
-    .setClassToggle("#projects", "active")
-    .addTo(controller);
+// const projectsScene = new ScrollMagic.Scene({
+//     triggerElement: "#projects",
+//     triggerHook: 0.8,
+//     duration: "100%"
+// })
+//     .setClassToggle("#projects", "active")
+//     .addTo(controller);
 
 
 
@@ -58,10 +57,7 @@ window.addEventListener("scroll", () => {
     const scrollPosition = window.scrollY;
     const homeTop = document.getElementById("#homeTop").offsetTop;
     const aboutTop = document.getElementById("#aboutTop").offsetTop;
-    const projectsTop = document.getElementById("#projectsTop").offsetTop;
     const contactTop = document.getElementById("#contactTop").offsetTop;
-    const LoginTop = document.getElementById("#login-btn").offsetTop;
-    const RegisterTop = document.getElementById("#register-btn").offsetTop;
 
     if (scrollPosition < homeTop)
     {
