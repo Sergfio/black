@@ -1,7 +1,7 @@
 # Operating system files
 .DS_Store
 Thumbs.db
-
+.node_modules
 # Build artifacts
 *.pyc
 *.class
