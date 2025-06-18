@@ -12,6 +12,7 @@
     scroll-behavior: smooth;
     font-family: "Poppins", sans-serif;
 }
+
 :root {
     --bg-color: #081b29;
     --second-bg-color: #112e42;
@@ -31,10 +32,12 @@ html {
     font-size: 62.5%;
     overflow-x: hidden;
 }
+
 @keyframes fadeIn {
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
@@ -74,7 +77,7 @@ body {
 
 .nav-links a {
     text-decoration: none;
-    color:  var(--text-color);
+    color: var(--text-color);
 }
 
 dialog {
@@ -83,8 +86,8 @@ dialog {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 30rem;
-    background-color:  var(--main-color);
-    border: 1px solid  var(--bg-color);
+    background-color: var(--main-color);
+    border: 1px solid var(--bg-color);
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
     padding: 1rem;
     z-index: 1000;
@@ -104,7 +107,9 @@ dialog button {
 }
 
 
-.navbar a, #login-btn,  #register-btn{
+.navbar a,
+#login-btn,
+#register-btn {
     font-size: 1.7rem;
     color: var(--text-color);
     font-weight: 500;
@@ -290,6 +295,7 @@ dialog button {
     margin-bottom: 3rem;
     text-align: center;
 }
+
 section {
     min-height: 100vh;
     padding: 10rem 9% 2rem;
@@ -422,8 +428,9 @@ span {
 }
 
 #animate1 {
-	transition: transform 0.3s ease-out;
+    transition: transform 0.3s ease-out;
 }
+
 .zap {
-	transform: scale(2.5, 0);
+    transform: scale(2.5, 0);
 }
