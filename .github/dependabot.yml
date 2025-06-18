@@ -1,0 +1,34 @@
+# .github/dependabot.yml
+
+# Dokumentation für alle Konfigurationsoptionen:
+# https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
+
+version: 2
+updates:
+  # Konfiguration für npm-Abhängigkeiten
+  - package-ecosystem: "npm" # Gibt an, dass Dependabot den Node.js/npm-Ökosystem überwachen soll
+    directory: "/" # Pfad zum Ort der package.json und package-lock.json-Dateien
+    schedule:
+      interval: "weekly" # Überprüft einmal pro Woche auf Updates
+
+    # Optional: Labels für die Pull Requests von Dependabot
+    labels:
+      - "dependencies"
+      - "automated"
+      - "dependabot"
+
+    # Optional: Ein Reviewer oder Team für die Pull Requests
+    # reviewers:
+    #   - "dein-github-username" # Ersetze dies durch deinen GitHub-Benutzernamen
+    # teams:
+    #   - "mein-entwickler-team" # Ersetze dies durch den Namen deines GitHub-Teams
+
+    # Optional: Spezifische Branches, auf denen PRs erstellt werden sollen
+    # target-branch: "main" # Wenn du Dependabot-PRs nur auf dem 'main' Branch erstellen möchtest
+
+    # Optional: Ignoriere bestimmte Updates (z.B. große Versionssprünge oder spezifische Pakete)
+    # ignore:
+    #   - dependency-name: "express"
+    #     versions: ["4.x"] # Ignoriert alle 4.x Versionen von express
+    #   - dependency-name: "lodash"
+    #     versions: ["~3.0", "~4.0"] # Ignoriert Minor-Updates für 3.x und 4.x
