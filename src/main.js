@@ -8,7 +8,7 @@ import "./style.css";
 // Diese Zeilen stellen sicher, dass jQuery global verfügbar ist, falls benötigt.
 import $ from "jquery";
 window.jQuery = $; // Stellt jQuery global als 'jQuery' bereit
-window.$ = $;     // Stellt jQuery global als '$' bereit
+window.$ = $; // Stellt jQuery global als '$' bereit
 
 // 3. GSAP importieren (ScrollMagic wird oft mit GSAP für Animationen kombiniert)
 // Auch wenn es in deinem aktuellen Code nicht direkt für Animationen genutzt wird,
@@ -21,20 +21,10 @@ import ScrollMagic from "scrollmagic";
 // Import des Debug-Indikatoren-Plugins. Der Pfad ist hier korrigiert.
 import "scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators";
 
+// 5. Importiere die Funktion aus scene.js
 import { createZapAnimationScene } from "./scene.js";
 
-document.addEventListener("DOMContentLoaded", () => {
-  console.log("DOM vollständig geladen und analysiert. Webpack startet...");
-
-  const controller = new ScrollMagic.Controller();
-
-  const zapScene = createZapAnimationScene(controller, ScrollMaigic);
-  document.getElementById("app").innerHTML = "<p>Dynamischer Inhalt von main.js erfolgreich geladen!</p>";
-   console.log("Webpack und ScrollMagic-Setup abgeschlossen.");
-})
-
-// 5. Stelle sicher, dass der gesamte DOM-Zugriff und die Initialisierung
-// erst NACH dem vollständigen Laden des DOMs erfolgen.
+// WICHTIG: Nur EIN document.addEventListener("DOMContentLoaded", ...) Block!
 document.addEventListener("DOMContentLoaded", () => {
   console.log("DOM vollständig geladen und analysiert. Webpack startet...");
 
@@ -42,7 +32,11 @@ document.addEventListener("DOMContentLoaded", () => {
   // Dieser Controller überwacht den Scroll-Status und steuert die Szenen.
   const controller = new ScrollMagic.Controller();
 
-  // Erstelle eine Szene für jeden Abschnitt deines Portfolios
+  // Erstelle die Szene aus scene.js
+  // ACHTUNG: Es muss 'ScrollMagic' (Groß-/Kleinschreibung) sein, nicht 'ScrollMaigic' (Tippfehler)
+  const zapScene = createZapAnimationScene(controller, ScrollMagic);
+
+  // Erstelle weitere Szenen für jeden Abschnitt deines Portfolios
   // 'triggerHook' 0.5 bedeutet, dass der Trigger ausgelöst wird, wenn der Trigger-Element
   // die Mitte des Viewports erreicht. Du kannst diesen Wert anpassen (0-1).
   // 'duration' "100%" bedeutet, dass die Szene so lange aktiv ist, wie das Trigger-Element sichtbar ist.
@@ -50,8 +44,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // Home Sektion Szene
   const homeScene = new ScrollMagic.Scene({
     triggerElement: "#home",
-    triggerHook: 0.5,
-    duration: "100%",
+    triggerHook: 0.5, // Oft ein guter Startpunkt
+    duration: "100%", // Die Szene läuft über die gesamte Höhe des Trigger-Elements
   })
     .setClassToggle("#home", "active") // Fügt 'active' Klasse hinzu/entfernt sie vom #home Element
     .addIndicators({ name: "Home Scene" }) // Fügt visuelle Debug-Indikatoren hinzu
@@ -122,7 +116,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // Fallback zu Infinity stellt sicher, dass undefinierte Sektionen nicht versehentlich ausgewählt werden
     const homeTop = homeSection ? homeSection.offsetTop : 0;
     const aboutTop = aboutSection ? aboutSection.offsetTop : Infinity;
-    const educationTop = educationSection ? educationSection.offsetTop : Infinity;
+    const educationTop = educationSection
+      ? educationSection.offsetTop
+      : Infinity;
     const contactTop = contactSection ? contactSection.offsetTop : Infinity;
     const projectsTop = projectsSection ? projectsSection.offsetTop : Infinity; // Muss existieren oder entfernt werden
 
@@ -132,7 +128,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Hilfsfunktion zum Setzen der 'active'-Klasse für Navigationslinks
     const setActiveNavLink = (activeHref) => {
-      document.querySelectorAll(".nav-links a").forEach(link => {
+      document.querySelectorAll(".nav-links a").forEach((link) => {
         if (link.getAttribute("href") === activeHref) {
           link.classList.add("active");
         } else {
@@ -147,7 +143,10 @@ document.addEventListener("DOMContentLoaded", () => {
       setActiveNavLink("#contact");
     } else if (scrollPosition >= educationTop - offset) {
       setActiveNavLink("#education");
-    } else if (scrollPosition >= projectsTop - offset && projectsTop !== Infinity) {
+    } else if (
+      scrollPosition >= projectsTop - offset &&
+      projectsTop !== Infinity
+    ) {
       // WICHTIG: Diese Bedingung nur aktiv lassen, wenn du auch eine #projects Sektion hast!
       setActiveNavLink("#projects");
     } else if (scrollPosition >= aboutTop - offset) {
@@ -159,6 +158,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Beispiel für dynamischen Inhalt im #app-Element
-  document.getElementById("app").innerHTML = "<p>Dynamischer Inhalt von main.js erfolgreich geladen!</p>";
+  document.getElementById("app").innerHTML =
+    "<p>Dynamischer Inhalt von main.js erfolgreich geladen!</p>";
   console.log("Webpack und ScrollMagic-Setup abgeschlossen.");
 });

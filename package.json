@@ -12,6 +12,7 @@
   "author": "sf",
   "license": "ISC",
   "dependencies": {
+    "gsap": "^3.13.0",
     "jquery": "^3.7.1",
     "scrollmagic": "^2.0.8"
   },
