@@ -1,42 +1,36 @@
-# See http://help.github.com/ignore-files/ for more about ignoring files.
+# Node.js
+node_modules/        # Der Ordner mit allen installierten npm-Paketen
 
-# Compiled output
-/dist
-/tmp
-/out-tsc
-/bazel-out
+# Build-Artefakte
+dist/                # Der Ordner, den Webpack generiert (dein finaler Build)
 
-# Node
-/node_modules
-npm-debug.log
-yarn-error.log
+# Logs
+npm-debug.log* # NPM-Debug-Logs
+yarn-debug.log* # Yarn-Debug-Logs
+yarn-error.log* # Yarn-Fehler-Logs
 
-# IDEs and editors
-.idea/
-.project
-.classpath
-.c9/
-*.launch
-.settings/
+# OS-generierte Dateien
+.DS_Store            # macOS spezifische Datei
+Thumbs.db            # Windows spezifische Datei
+.localized           # macOS spezifische Datei
+
+# Editor/IDE spezifische Dateien (Beispiele - füge hinzu, was du nutzt)
+.vscode/             # Visual Studio Code Einstellungen (falls du sie nicht teilen möchtest)
+.idea/               # IntelliJ/WebStorm spezifische Dateien
+*.sublime-project
 *.sublime-workspace
 
-# Visual Studio Code
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-.history/*
+# Temporäre Dateien
+*.tmp
+*.bak
+*.swp
+*~.nib
+*.log
 
-# Miscellaneous
-/.angular/cache
-.sass-cache/
-/connect.lock
-/coverage
-/libpeerconnection.log
-testem.log
-/typings
+# Umgebungsvariablen (sehr wichtig für Zugangsdaten!)
+.env                 # Wenn du eine .env-Datei für Umgebungsvariablen nutzt
+.env.* # Alle Dateien, die mit .env. beginnen (z.B. .env.local, .env.development)
 
-# System files
-.DS_Store
-Thumbs.db
+# Andere
+coverage/            # Wenn du Testabdeckungsberichte generierst
+node_modules
