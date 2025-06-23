@@ -2,7 +2,7 @@
 
 // 1. Dein CSS importieren
 // WICHTIG: Dadurch wird style.css von Webpack verarbeitet und in die Seite injiziert.
-import "/style.css";
+import "./style.css";
 
 // 2. jQuery importieren (ScrollMagic und ältere Skripte könnten es global erwarten)
 // Diese Zeilen stellen sicher, dass jQuery global verfügbar ist, falls benötigt.
